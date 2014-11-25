@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@View.Title</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/bootstrap.min.css")" />
+</head>
+<body>
+    <ul id="menu">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    </ul>
+    <section id="main">
+        @RenderBody()
+        <p>Copyright?</p>
+    </section>
+</body>
+</html>

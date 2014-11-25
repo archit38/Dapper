@@ -22,3 +22,18 @@ GO
 
 SET ANSI_PADDING OFF
 GO
+
+
+CREATE TABLE [dbo].[Challenges]
+(
+	[LeagueID] [int]  NOT NULL,
+	[ChallengeID] [int] IDENTITY(1,1) NOT NULL,
+	[PlayerID1] [int]  NOT NULL,
+	[PlayerID2] [int]  NOT NULL,
+	PRIMARY KEY ([ChallengeID]),
+	FOREIGN KEY ([LeagueID]) REFERENCES [dbo].[League](leagueid),
+	FOREIGN KEY ([PlayerID1]) REFERENCES [dbo].[tblEmployee](EmpID),
+	FOREIGN KEY ([PlayerID2]) REFERENCES [dbo].[tblEmployee](EmpID),
+)
+
+
